@@ -1,16 +1,40 @@
 {% extends "base.html.twig" %}
 {% block main %}
+{#
+    FR - En-tête du formulaire.
+    EN - Form's header.
+#}
 <div id="form-header" class="w-xl m-auto flex flex-col gap-4">
-    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+    {#
+        FR - SVG de l'en-tête (Logo de Tailwind).
+        EN - Header SVG (Tailwind's logo).
+    #}
+    <?xml version="1.0" encoding="utf-8"?>
     <svg class="w-16 m-auto fill-indigo-600 stroke-indigo-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"/>
     </svg>
+    {#
+        FR - Titre.
+        EN - Title.
+    #}
     <h1 class="text-2xl text-center font-bold">
         Sign in to your account
     </h1>
 </div>
+{#
+    FR - Corps du formulaire, ce conteneur sert de wrapper.
+    EN - Form's body, this container is used as a wrapper.
+#}
 <div class="w-xl mx-auto bg-white p-12 rounded-lg shadow-md flex flex-col gap-12">
+    {#
+        FR - Le formulaire en tant que tel.
+        EN - The form itself.
+    #}
     <form id="form-main" class="flex flex-col gap-8">
+        {#
+            FR - Groupes label/input permettant une meilleure architecture du formulaire.
+            EN - Label/input groups allowing a better form architecture.
+        #}
         <div id="form-field-group-email" class="font-bold">
             <label for="input-email" class="text-lg font-medium">
                 Email address
@@ -23,6 +47,10 @@
             </label>
             <input type="password" name="input-password" id="input-password" required class="w-full border-2 border-gray-300 rounded-lg h-10 p-2">
         </div>
+        {#
+            FR - Un autre conteneur, utilisé comme wrapper pour la case à cocher "Remember me" et pour le lien "Forgot password ?"
+            EN - Another container, used a wrapper for the "Remember me" checkbox and the "Forgot password ?" link.
+        #}
         <div class="flex flex-row justify-between text-normal font-medium font-bold">
             <div id="form-field-group-password-remember-me" class="flex flex-row align-middle gap-2">
                 <input type="checkbox" name="input-remember-me" id="input-remember-me" required class="w-4">
@@ -32,15 +60,35 @@
             </div>
             <a href="#" class="font-medium"><span class="text-indigo-600">Forgot password ?</span></a>
         </div>
+        {#
+            FR - Bouton d'envoie du formulaire.
+            EN - Form's sending button.
+        #}
         <input type="submit" value="Sign in" class="bg-indigo-600 py-2 text-white border-1 border-gray-300 rounded-lg">
     </form>
+    {#
+        FR - Aside au formulaire proposant d'autres options de connexion.
+        EN - Form's aside proposing other logging options.
+    #}
     <div id="form-aside" class="flex flex-col gap-8">
+        {#
+            FR - "En-tête" de l'aside contenant des règles et le paragraphe.
+            EN - Aside's "header" containing rules and the paragraph.
+        #}
         <div class="flex flex-row items-center gap-6">
             <hr class="flex-grow border-t border-gray-300">
             <p class="font-bold">Or continue with</p>
             <hr class="flex-grow border-t border-gray-300">
         </div>
+        {#
+            FR - Un conteneur servant de wrapper pour les boutons de connexion alternatifs.
+            EN - A container used as wrapper for the alternative login buttons.
+        #}
         <div class="flex flex-row items-center gap-4">
+            {#
+                FR - Boutons HTML possédant une image au format PNG illustrant le moyen de connexion alternatif avec une span pour le texte du bouton.
+                EN - HTML buttons possessing a PNG image showing the alternative way to login, with a span for the button's text.
+            #}
             <button class="flex-1 flex flex-row justify-center items-center gap-4 border-2 border-gray-300 rounded-lg py-2">
                 <img src="./images/icon-google.png" alt="Se connected via Google." class="w-6">
                 <span class="font-bold">Google</span>
@@ -52,6 +100,10 @@
         </div>
     </div>
 </div>
+{#
+    FR - Pied du formulaire.
+    EN - Form's footer.
+#}
 <div id="form-footer" class="w-xl m-auto">
     <p class="text-center font-medium">Not a member ? <a href="#" class="text-indigo-600 font-bold">Start a 14 day free trial</a></p>
 </div>
