@@ -1,3 +1,51 @@
 {% extends "base.html.twig" %}
 {% block main %}
+    <div id="form-header" class="">
+        <img src="./images/icon-tailwind.svg" class="w-16">
+        <h1 class>
+            Sign in to your account
+        </h1>
+    </div>
+    <div>
+        <form id="form-main" class="">
+            <div id="form-field-group-email" class="">
+                <label for="input-email">
+                    Email address
+                </label>
+                <input type="email" name="input-email" id="input-email" required>
+            </div>
+            <div id="form-field-group-password" class="">
+                <label for="input-password">
+                    Password
+                </label>
+                <input type="password" name="input-password" id="input-password" required>
+            </div>
+            <div class="">
+                <div id="form-field-group-password-remember-me" class="">
+                    <input type="checkbox" name="input-remember-me" id="input-remember-me" required>
+                    <label for="input-remember-me">
+                        Remember me
+                    </label>
+                </div>
+                <a href="#">Forgot password ?</a>
+            </div>
+            <input type="submit" value="Sign in" class="">
+        </form>
+        <div id="form-aside" class="">
+            <p>Or continue with</p>
+            <div class="">
+                <button class="">
+                    <img src="./images/icon-google.png" alt="Se connected via Google." class="w-6">
+                    <span>Google</span>
+                </button>
+                <button class="">
+                    <img src="./images/icon-github.png" alt="Se connecter via GitHub." class="w-6">
+                    <span>GitHub</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="form-footer" class="">
+        <p>Not a member ? <a href="#">Start a 14 day free trial</a></p>
+    </div>
 {% endblock %}
