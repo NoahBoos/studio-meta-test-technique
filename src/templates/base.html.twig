@@ -7,16 +7,16 @@
         {% block css %}
         {% endblock %}
     </head>
-    <body>
-        <header>
+    <body class="bg-gray-100 min-h-screen flex flex-col">
+        <header class="w-full">
             {% block header %}
             {% endblock %}
         </header>
-        <main>
+        <main class="w-full min-h-screen flex flex-col justify-center">
             {% block main %}
             {% endblock %}
         </main>
-        <footer>
+        <footer class="w-full">
             {% block footer %}
             {% endblock %}
         </footer>

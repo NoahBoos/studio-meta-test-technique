@@ -1,51 +1,58 @@
 {% extends "base.html.twig" %}
 {% block main %}
-    <div id="form-header" class="">
-        <img src="./images/icon-tailwind.svg" class="w-16">
-        <h1 class>
-            Sign in to your account
-        </h1>
-    </div>
-    <div>
-        <form id="form-main" class="">
-            <div id="form-field-group-email" class="">
-                <label for="input-email">
-                    Email address
+<div id="form-header" class="w-xl m-auto flex flex-col gap-4">
+    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+    <svg class="w-16 m-auto fill-indigo-600 stroke-indigo-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"/>
+    </svg>
+    <h1 class="text-2xl text-center font-bold">
+        Sign in to your account
+    </h1>
+</div>
+<div class="w-xl mx-auto bg-white p-12 rounded-lg shadow-md flex flex-col gap-12">
+    <form id="form-main" class="flex flex-col gap-8">
+        <div id="form-field-group-email" class="font-bold">
+            <label for="input-email" class="text-lg font-medium">
+                Email address
+            </label>
+            <input type="email" name="input-email" id="input-email" required class="w-full border-2 border-gray-300 rounded-lg h-10 p-2">
+        </div>
+        <div id="form-field-group-password" class="font-bold">
+            <label for="input-password" class="text-lg font-medium">
+                Password
+            </label>
+            <input type="password" name="input-password" id="input-password" required class="w-full border-2 border-gray-300 rounded-lg h-10 p-2">
+        </div>
+        <div class="flex flex-row justify-between text-normal font-medium font-bold">
+            <div id="form-field-group-password-remember-me" class="flex flex-row align-middle gap-2">
+                <input type="checkbox" name="input-remember-me" id="input-remember-me" required class="w-4">
+                <label for="input-remember-me">
+                    Remember me
                 </label>
-                <input type="email" name="input-email" id="input-email" required>
             </div>
-            <div id="form-field-group-password" class="">
-                <label for="input-password">
-                    Password
-                </label>
-                <input type="password" name="input-password" id="input-password" required>
-            </div>
-            <div class="">
-                <div id="form-field-group-password-remember-me" class="">
-                    <input type="checkbox" name="input-remember-me" id="input-remember-me" required>
-                    <label for="input-remember-me">
-                        Remember me
-                    </label>
-                </div>
-                <a href="#">Forgot password ?</a>
-            </div>
-            <input type="submit" value="Sign in" class="">
-        </form>
-        <div id="form-aside" class="">
-            <p>Or continue with</p>
-            <div class="">
-                <button class="">
-                    <img src="./images/icon-google.png" alt="Se connected via Google." class="w-6">
-                    <span>Google</span>
-                </button>
-                <button class="">
-                    <img src="./images/icon-github.png" alt="Se connecter via GitHub." class="w-6">
-                    <span>GitHub</span>
-                </button>
-            </div>
+            <a href="#" class="font-medium"><span class="text-indigo-600">Forgot password ?</span></a>
+        </div>
+        <input type="submit" value="Sign in" class="bg-indigo-600 py-2 text-white border-1 border-gray-300 rounded-lg">
+    </form>
+    <div id="form-aside" class="flex flex-col gap-8">
+        <div class="flex flex-row items-center gap-6">
+            <hr class="flex-grow border-t border-gray-300">
+            <p class="font-bold">Or continue with</p>
+            <hr class="flex-grow border-t border-gray-300">
+        </div>
+        <div class="flex flex-row items-center gap-4">
+            <button class="flex-1 flex flex-row justify-center items-center gap-4 border-2 border-gray-300 rounded-lg py-2">
+                <img src="./images/icon-google.png" alt="Se connected via Google." class="w-6">
+                <span class="font-bold">Google</span>
+            </button>
+            <button class="flex-1 flex flex-row justify-center items-center gap-4 border-2 border-gray-300 rounded-lg py-2">
+                <img src="./images/icon-github.png" alt="Se connecter via GitHub." class="w-6">
+                <span class="font-bold">GitHub</span>
+            </button>
         </div>
     </div>
-    <div id="form-footer" class="">
-        <p>Not a member ? <a href="#">Start a 14 day free trial</a></p>
-    </div>
+</div>
+<div id="form-footer" class="w-xl m-auto">
+    <p class="text-center font-medium">Not a member ? <a href="#" class="text-indigo-600 font-bold">Start a 14 day free trial</a></p>
+</div>
 {% endblock %}
